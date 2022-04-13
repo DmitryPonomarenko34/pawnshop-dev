@@ -1,0 +1,40 @@
+.header {
+  padding: 28px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__link {
+    display: block;
+    padding: 13px 18px;
+    background-color: var(--bg-color);
+    color: var(--second-color);
+    border-radius: 22px;
+  }
+}
+
+.menu {
+  margin-right: 41px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    +.menu__list-item {
+      margin-left: 45px;
+    }
+  }
+
+  &__list-link {
+  
+  }
+}
+
+.primary {}

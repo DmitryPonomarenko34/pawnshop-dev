@@ -34,10 +34,77 @@ body {
   padding: 0 15px;
 }
 
+.link {
+  font-size: 14px;
+  line-height: 18px;
+  color: inherit;
+  @extend %inter-bold;
+}
+
 .title {
   color: var(--default-color);
   font-size: 36px;
   line-height: 50px;
 
   @extend %inter-bold;
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+  margin-right: 53px;
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-right: 36px;
+    line-height: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: 18px;
+      height: 44px;
+      width: 1px;
+      background-color: var(--primary-color);
+    }
+  }
+
+  &__ic {
+    width: 25px;
+    height: 24px;
+    fill: var(--bg-color);
+  }
+
+  &__num {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--bg-color);
+  }
+}
+
+.contact-link {
+  position: relative;
+  display: block;
+  font-size: 24px;
+  line-height: 30px;
+  padding-left: 42px;
+  color: var(--default-color);
+  @extend %inter-semibold;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    background-image: url('@img/icons/multi/spriteMulti.svg#tel');
+    background-repeat: no-repeat;
+  }
+}
+
+.disabled {
+  color: var(--primary-color) !important;
 }
