@@ -5,4 +5,43 @@
 @import "global";
 @import "components/header";
 @import "components/footer";
+
+.first {
+
+  &__inner {
+    padding: 25px 0 25px 74px;
+    min-height: 430px;
+    background-color: #d2002d;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-position: right bottom;
+    background-size: 77%;
+    background-repeat: no-repeat;
+  }
+
+  &__box {
+    max-width: 367px;
+  }
+
+  &__title {
+    font-size: 96px;
+    line-height: 116px;
+    color: var(--second-color);
+    @extend %inter-bold;
+    margin-bottom: 11px;
+  }
+
+  &__title--break {
+    display: block;
+    font-size: 80px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: var(--second-color);
+  }
+}
+
+
 @import "media";
