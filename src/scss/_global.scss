@@ -5,7 +5,6 @@ body {
 
 body {
   color: var(--default-color);
-  font-weight: 400;
   font-size: 16px;
   line-height: 26px;
 
@@ -18,6 +17,10 @@ body {
 
 .body-lock {
   overflow: hidden;
+}
+
+.o-sec {
+  padding: 50px 0;
 }
 
 .site-container {
@@ -107,4 +110,122 @@ body {
 
 .disabled {
   color: var(--primary-color) !important;
+}
+
+.slider {
+  padding: 20px;
+
+  &__container {
+    position: relative;
+    margin: 0 -20px;
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    width: 56px;
+    height: 56px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -45%);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 21px;
+      height: 22px;
+    }
+  }
+
+  &__btn-prev {
+    left: -53px;
+    z-index: 10;
+    &::after {
+      background-image: url('@img/icons/multi/spriteMulti.svg#angle-prev');
+    }
+  }
+
+  &__btn-next {
+    right: -53px;
+    z-index: 10;
+    &::after {
+      background-image: url('@img/icons/multi/spriteMulti.svg#angle-next');
+    }
+  }
+
+  &__slide {
+    display: flex;
+    height: auto;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 25px 25px;
+  max-width: 285px;
+  border-radius: 30px;
+  background-color: #f9f9f9;
+  color: inherit;
+
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+    .card__btn {
+      opacity: 1;
+      visibility: visible;
+      cursor: pointer;
+      &:hover {
+        .card__btn-ic {
+          fill: var(--default-color);
+        }
+      }
+    }
+  }
+
+  &__imgbox {
+    margin: 0 auto 35px;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    margin-bottom: 11px;
+    line-height: 19px;
+    @extend %inter-medium;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 14px;
+    color: #6c6c6c;
+    @extend %inter-medium;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    line-height: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__btn-ic {
+    width: 25px;
+    height: 24px;
+    fill: var(--bg-color);
+  }
 }

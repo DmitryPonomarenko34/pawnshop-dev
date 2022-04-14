@@ -43,7 +43,7 @@
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.1.0",
-    "swiper": "^8.0.3",
+    "swiper": "^8.1.0",
     "webp-converter": "^2.2.3",
     "webpack": "^5.68.0",
     "webpack-stream": "^7.0.0"
