@@ -5,6 +5,9 @@
         <img class="logo__img" src="@img/logo.svg" alt="логотип">
       </a>
       <nav class="menu">
+        <button class="burger">
+          <span class="burger__line"></span>
+        </button>
         <ul class="menu__list">
           <li class="menu__list-item">
             <a class="menu__list-link link" href="#">
@@ -17,15 +20,15 @@
             </a>
           </li>
           <li class="menu__list-item">
-            <a class="menu__list-link link" href="#">
+            <button class="menu__list-link link popup-btn btn-reset" data-path="support-popup">
               Вызов специалиста
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
       <div class="basket">
         <a class="basket__link" href="#">
-          <svg class="basket__ic">
+          <svg class="second-ic">
             <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
           </svg>
         </a>
@@ -33,9 +36,9 @@
           0
         </span>
       </div>
-      <a class="header__link link" href="#">
+      <button class="header__link popup-btn second-btn" data-path="form-popup">
         Мой кабинет
-      </a>
+      </button>
     </div>
   </div>
 </header>

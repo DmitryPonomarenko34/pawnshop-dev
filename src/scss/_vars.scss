@@ -5,6 +5,34 @@
   --bg-color: #d10931;
 }
 
+@mixin text-hover($color: var(--bg-color),) {
+  color: $color;
+  transition: ease 0.3s color;
+}
+
+@mixin text-hover-trs {
+  transition: ease 0.3s color;
+}
+
+@mixin ic-hover($ic-color: var(--default-color),) {
+  transition: ease 0.3s fill;
+  fill: $ic-color;
+}
+
+@mixin ic-hover-trs {
+  transition: ease 0.3s fill;
+}
+
+@mixin link-hover {
+  color: var(--second-color);
+  background-color: var(--default-color);
+  transition: ease 0.3s background-color, ease 0.3s color;
+}
+
+@mixin link-hover-trs {
+  transition: ease 0.3s background-color, ease 0.3s color;
+}
+
 %inter-regular {
   font-weight: 400;
   font-family: "Inter-regular", sans-serif;
@@ -32,7 +60,7 @@
 }
 
 @mixin laptop-L {
-  @media (max-width: 1200px) {
+  @media (max-width: 1440px) {
     @content;
   }
 }

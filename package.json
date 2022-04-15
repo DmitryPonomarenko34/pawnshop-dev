@@ -47,5 +47,8 @@
     "webp-converter": "^2.2.3",
     "webpack": "^5.68.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "choices.js": "^7.0.0"
   }
 }

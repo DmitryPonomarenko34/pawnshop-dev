@@ -11,16 +11,16 @@
   }
 
   &__link {
-    display: block;
-    padding: 13px 18px;
-    background-color: var(--bg-color);
     color: var(--second-color);
-    border-radius: 22px;
+    font-size: 14px;
+    line-height: 18px;
+
+    @extend %inter-bold;
   }
 }
 
 .menu {
-  margin-right: 41px;
+  margin-right: 44px;
 
   &__list {
     display: flex;
@@ -31,10 +31,4 @@
       margin-left: 45px;
     }
   }
-
-  &__list-link {
-  
-  }
 }
-
-.primary {}

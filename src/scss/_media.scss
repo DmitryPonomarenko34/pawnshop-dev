@@ -1,0 +1,58 @@
+@media (any-hover: hover) {
+  .link,
+  .footer__link,
+  .contact-link,
+  .tab-btn,
+  .product__list-link {
+    @include text-hover-trs;
+
+    &:hover {
+      @include text-hover;
+    }
+  }
+
+  .second-ic {
+    @include ic-hover-trs;
+
+    &:hover {
+      @include ic-hover;
+    }
+  }
+
+  .modal {
+    &__close-ic {
+      @include ic-hover-trs;
+
+      &:hover {
+        @include ic-hover(var(--bg-color));
+      }
+    }
+  }
+
+  .support-modal {
+    &__ic {
+      &:hover {
+        @include ic-hover;
+      }
+    }
+  }
+
+  .popup-form {
+    &__popup-btn {
+      @include text-hover-trs;
+
+      &:hover {
+        @include text-hover(var(--default-color));
+      }
+    }
+  }
+
+  .second-btn,
+  .second-link {
+    @include link-hover-trs;
+
+    &:hover {
+      @include link-hover;
+    }
+  }
+}

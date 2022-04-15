@@ -6,13 +6,11 @@
 "style": 'style.min.css'
 })
 
-
-
 <body class="body">
   <div class="site-container">
     @@include('html/header.html', {})
     <main class="main">
-      <section class="o-sec first">
+      <section class="first">
         <div class="container">
           <div class="first__inner" style="background-image: url('@img/main/first-sec/bg-1.jpg');">
             <div class="first__box">
@@ -28,7 +26,7 @@
           </div>
         </div>
       </section>
-      <section class="o-sec product">
+      <section class="product">
         <div class="container">
           <div class="product__info">
             <h2 class="title">
@@ -82,8 +80,8 @@
                       <span class="card__price">
                         107.00 €
                       </span>
-                      <button class="card__btn">
-                        <svg class="card__btn-ic">
+                      <button class="card__btn btn-reset">
+                        <svg class="second-ic">
                           <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
                         </svg>
                       </button>
@@ -105,8 +103,8 @@
                       <span class="card__price">
                         1100.00 €
                       </span>
-                      <button class="card__btn">
-                        <svg class="card__btn-ic">
+                      <button class="card__btn btn-reset">
+                        <svg class="second-ic">
                           <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
                         </svg>
                       </button>
@@ -128,8 +126,8 @@
                       <span class="card__price">
                         90.00 €
                       </span>
-                      <button class="card__btn">
-                        <svg class="card__btn-ic">
+                      <button class="card__btn btn-reset">
+                        <svg class="second-ic">
                           <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
                         </svg>
                       </button>
@@ -151,8 +149,8 @@
                       <span class="card__price">
                         120.00 €
                       </span>
-                      <button class="card__btn">
-                        <svg class="card__btn-ic">
+                      <button class="card__btn btn-reset">
+                        <svg class="second-ic">
                           <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
                         </svg>
                       </button>
@@ -174,8 +172,8 @@
                       <span class="card__price">
                         90.00 €
                       </span>
-                      <button class="card__btn">
-                        <svg class="card__btn-ic">
+                      <button class="card__btn btn-reset">
+                        <svg class="second-ic">
                           <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
                         </svg>
                       </button>
@@ -188,9 +186,71 @@
           </div>
         </div>
       </section>
+      <section class="about">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about__box">
+              <h2 class="about__title second-title">
+                О нас
+                </h3>
+                <p class="about__text">
+                  Как один из лидеров рынка залогового кредитования физических лиц «Ломбард Онлайн» стремится постоянно
+                  расширять возможности клиентов при получении займов, а также совершенствует сервис, расширяя линейку
+                  принимаемых залогов: можно получить кредит практически под любой вид бытовой
+                  и электронной техники, и электроинструментов. Клиентам обеспечены абсолютно прозрачные условия
+                  кредитования
+                  и возможность выбрать оптимальный тарифный продукт, максимально отвечающий их потребностям.
+                </p>
+            </div>
+            <picture>
+              <source srcset="@img/main/about/1.webp" type="image/webp">
+              <img class="about__img" src="@img/main/about/1.png" alt="декоративная картинка">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="info">
+        <div class="container">
+          <div class="info__inner">
+            <div class="info__item">
+              <h2 class="info__title title">
+                Условия предоставления потребительского займа
+                в ООО «Ломбард Онлайн»:
+              </h2>
+              <p class="info__text">
+                период погашения займа от 60 до 330 дней с даты залога.
+                Пример расчета стоимости займа (сумма займа 100.00 €., период 62 дня, процентная ставка 0,134% в день,
+                процентная ставка 48,91% в год): сумма процентов = 100.00 € х 0,134/100 х 62 дня = 110.00 €
+              </p>
+            </div>
+            <div class="info__item">
+              <p class="info__text">
+                Если клиент не планирует востребовать предмет залога,
+                то по истечению срока пользования займом и льготного месяца залог реализуется на торгах, никаких
+                претензий и штрафов нет.
+              </p>
+              <p class="info__text">
+                Информация не передается в бюро кредитных историй, поэтому факт не выкупа не влияет на кредитную историю
+                клиента при дальнейшем сотрудничестве.
+                Размер процентной ставки (минимальная и максимальная)
+                в день зависит от предмета залога и суммы займа.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/footer.html', {})
   </div>
+
+  <div class="modals">
+    <div class="modal-overlay">
+      @@include('html/modals/authorization-modal.html', {})
+      @@include('html/modals/recovery-modal.html', {})
+      @@include('html/modals/support-modal.html', {})
+    </div>
+  </div>
+
   <script src="js/main.min.js"></script>
 </body>
 

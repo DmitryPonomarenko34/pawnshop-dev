@@ -1,0 +1,72 @@
+<div class="modal modal--1" data-target="form-popup" data-simplebar>
+  <button class="modal__close">
+    <svg class="modal__close-ic">
+      <use xlink:href="@img/icons/mono/spriteMono.svg#close"></use>
+    </svg>
+  </button>
+  <div class="modal__tabs">
+    <button class="modal__tabs-btn tab-btn active" data-path="login-form">
+      Авторизация
+    </button>
+    <button class="modal__tabs-btn tab-btn" data-path="reg-form">
+      Регистрация
+    </button>
+  </div>
+  <form class="popup-form active" action="#" data-target="login-form" >
+    <label class="popup-form__label">
+      <span class="popup-form__text">
+        E-mail:
+      </span>
+      <input class="popup-form__input" type="email" placeholder="Введите ваш e-mail">
+    </label>
+    <label class="popup-form__label">
+      <span class="popup-form__text">
+        Пароль:
+      </span>
+      <input class="popup-form__input" type="password" placeholder="Введите ваш пароль">
+    </label>
+    <div class="popup-form__box">
+      <button class="popup-form__btn second-btn" type="submit">
+        Войти
+      </button>
+      <button class="popup-form__popup-btn popup-btn btn-reset" type="button" data-path="recovery-popup">
+        Забыли пароль?
+      </button>
+    </div>
+  </form>
+  <form class="popup-form" action="#" data-target="reg-form">
+    <label class="popup-form__label">
+      <span class="popup-form__text">
+        Имя:
+      </span>
+      <input class="popup-form__input" type="text" placeholder="Введите ваше имя">
+    </label>
+    <label class="popup-form__label">
+      <span class="popup-form__text">
+        Фамилия:
+      </span>
+      <input class="popup-form__input" type="email" placeholder="Введите вашу фамилию">
+    </label>
+    <label class="popup-form__label">
+      <span class="popup-form__text">
+        E-mail:
+      </span>
+      <input class="popup-form__input" type="email" placeholder="Введите ваш e-mail">
+    </label>
+    <label class="popup-form__label">
+      <span class="popup-form__text">
+        Пароль:
+      </span>
+      <input class="popup-form__input" type="password" placeholder="Введите ваш пароль">
+    </label>
+    <label class="popup-form__label">
+      <span class="popup-form__text">
+        Повторить пароль:
+      </span>
+      <input class="popup-form__input" type="password" placeholder="Введите пароль повторно">
+    </label>
+    <button class="popup-form__btn second-btn" type="submit">
+      Войти
+    </button>
+  </form>
+</div>
