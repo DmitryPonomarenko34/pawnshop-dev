@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title": 'Ломбард онлайн',
+"style": 'product.min.css'
+})
+
+<body class="body">
+  <div class="site-container">
+    @@include('html/header.html', {
+    "dopClass": '',
+    })
+    <main class="main">
+      <section class="product">
+        <h1 class="hidden">Страница товара</h1>
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">
+                Главная
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">
+                Телефоны, планшеты
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link current">
+                Мобильный телефон Apple iPhone 13 Pro 256GB Silver
+              </a>
+            </li>
+          </ul>
+          <h2 class="product__caption title">
+            Мобильный телефон Apple iPhone 13 Pro 256GB Silver
+          </h2>
+          <div class="product__inner">
+            <div class="product__imgbox">
+              <picture>
+                <source srcset="@img/product/1.webp" type="image/webp">
+                <img class="product__img" src="@img/product/1.png" alt="Гаджет">
+              </picture>
+            </div>
+            <div class="product__content">
+              <div class="product__content-box">
+                <span class="product__price">
+                  1100.00 €
+                </span>
+                <button class="product__addbtn second-btn btn-reset">
+                  Добавить в корзину
+                </button>
+                <button class="product__btn popup-btn btn-reset" data-path="support-popup">
+                  Получить консультацию
+                </button>
+              </div>
+              <div class="product__content-info">
+                <span class="product__content-caption">
+                  Товар в магазине по адресу:
+                </span>
+                <p class="product__content-text">
+                  Varšavas iela 48, Daugavpils,
+                  LV-5404
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="product__descr">
+            <div class="info-text">
+              <span class="info-text__descr">
+                Описание
+              </span>
+            </div>
+            <ul class="descr-list">
+              <li class="descr-list__item">
+                <p class="descr-list__key">
+                  ШтрихКод:
+                </p>
+                <p class="descr-list__value">
+                  2000000078298
+                </p>
+              </li>
+              <li class="descr-list__item">
+                <p class="descr-list__key">
+                  Комлектация:
+                </p>
+                <p class="descr-list__value">
+                  Полный комплект: коробка, документы, зарядное устройство, чек
+                </p>
+              </li>
+              <li class="descr-list__item">
+                <p class="descr-list__key">
+                  Товар в магазине по адресу:
+                </p>
+                <p class="descr-list__value">
+                  Varšavas iela 48, Daugavpils, LV-5404
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="o-sec">
+        <div class="container">
+          <h2 class="title">
+            Похожие товары
+          </h2>
+          <div class="o-sec__inner">
+            <a class="o-sec__item card" href="#">
+              <div class="card__imgbox">
+                <picture>
+                  <source srcset="@img/main/product/01.webp" type="image/webp">
+                  <img class="card__img" src="@img/main/product/01.png" alt="смарт-часы">
+                </picture>
+              </div>
+              <h4 class="card__title">
+                Смарт-часы Apple Watch Series 7 GPS 41mm Blue
+              </h4>
+              <div class="card__box">
+                <span class="card__price">
+                  107.00 €
+                </span>
+                <button class="card__btn btn-reset">
+                  <svg class="second-ic">
+                    <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+            <a class="o-sec__item card" href="#">
+              <div class="card__imgbox">
+                <picture>
+                  <source srcset="@img/main/product/02.webp" type="image/webp">
+                  <img class="card__img" src="@img/main/product/02.png" alt="смарт-часы">
+                </picture>
+              </div>
+              <h4 class="card__title">
+                Мобильный телефон Apple iPhone 13 Pro
+              </h4>
+              <div class="card__box">
+                <span class="card__price">
+                  1100.00 €
+                </span>
+                <button class="card__btn btn-reset">
+                  <svg class="second-ic">
+                    <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+            <a class="o-sec__item card" href="#">
+              <div class="card__imgbox">
+                <picture>
+                  <source srcset="@img/main/product/03.webp" type="image/webp">
+                  <img class="card__img" src="@img/main/product/03.png" alt="смарт-часы">
+                </picture>
+              </div>
+              <h4 class="card__title">
+                Наушники Audio-Technica ATH-M40x Black
+              </h4>
+              <div class="card__box">
+                <span class="card__price">
+                  90.00 €
+                </span>
+                <button class="card__btn btn-reset">
+                  <svg class="second-ic">
+                    <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+            <a class="o-sec__item card" href="#">
+              <div class="card__imgbox">
+                <picture>
+                  <source srcset="@img/main/product/04.webp" type="image/webp">
+                  <img class="card__img" src="@img/main/product/04.png" alt="смарт-часы">
+                </picture>
+              </div>
+              <h4 class="card__title">
+                Монитор 27" Dell SE2722H (210-AZKS)
+              </h4>
+              <div class="card__box">
+                <span class="card__price">
+                  120.00 €
+                </span>
+                <button class="card__btn btn-reset">
+                  <svg class="second-ic">
+                    <use xlink:href="@img/icons/mono/spriteMono.svg#basket"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      @@include('html/footer.html', {})
+  </div>
+
+  <div class="modals">
+    <div class="modal-overlay">
+      @@include('html/modals/authorization-modal.html', {})
+      @@include('html/modals/recovery-modal.html', {})
+      @@include('html/modals/support-modal.html', {})
+    </div>
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -61,6 +61,10 @@
 .product {
   padding: 115px 0 102px;
 
+  &__title {
+    margin-bottom: 0;
+  }
+
   &__info {
     display: flex;
     justify-content: space-between;

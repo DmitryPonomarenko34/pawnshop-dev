@@ -1,0 +1,85 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "../../node_modules/simplebar/dist/simplebar.min";
+@import "global";
+@import "components/header";
+@import "components/footer";
+
+.product {
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__caption {
+    margin-bottom: 72px;
+  }
+
+  &__imgbox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__img {
+    flex-shrink: 1;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 488px;
+    margin-left: 5%;
+    padding: 39px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+  }
+
+  &__content-box {
+    position: relative;
+    margin-bottom: 34px;
+    padding: 0 15px 23px;
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 32px;
+
+    @extend %inter-medium;
+  }
+
+  &__addbtn {
+    margin: 0 auto 36px;
+  }
+
+  &__btn {
+    color: var(--bg-color);
+    font-size: 14px;
+
+    @extend %inter-medium;
+  }
+
+  &__content-info {
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  &__content-caption {
+    margin-bottom: 15px;
+
+    @extend %inter-bold;
+  }
+
+  &__content-text {
+    max-width: 230px;
+    margin: 0 auto;
+  }
+}
+
+@import "media";

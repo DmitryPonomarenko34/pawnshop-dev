@@ -1,5 +1,4 @@
 @media (any-hover: hover) {
-
   .link,
   .footer__link,
   .contact-link,
@@ -109,13 +108,26 @@
 }
 
 @include laptop-L {
-
   .product,
   .about,
   .info,
   .footer,
   .o-sec {
     padding: 40px 0;
+  }
+
+  .o-sec {
+    &__item {
+      width: 31.333%;
+
+      &:nth-child(4n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
   }
 
   .header {
@@ -213,6 +225,24 @@
 }
 
 @include tablet-L {
+  .o-sec {
+    &__item {
+      width: 46.333%;
+
+      &:nth-child(4n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 2%;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
   .burger {
     display: flex;
   }
@@ -232,7 +262,6 @@
   }
 
   .support-modal {
-
     &__inner,
     &__text {
       padding: 20px 40px;
@@ -389,11 +418,59 @@
       }
     }
   }
+
+  .product {
+    &__caption {
+      margin-bottom: 20px;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__content {
+      max-width: none;
+      margin-left: 0;
+      padding: 15px 0;
+    }
+
+    &__imgbox {
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+
+    &__addbtn {
+      margin-bottom: 10px;
+    }
+
+    &__content-box {
+      margin-bottom: 10px;
+      padding: 0 10px 10px;
+    }
+  }
 }
 
 @include portrait-phones {
   .header {
     padding: 20px 0;
+  }
+
+  .o-sec {
+    &__item {
+      width: 100%;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
   }
 
   .first {
@@ -445,7 +522,6 @@
   }
 
   .support-modal {
-    
     &__inner,
     &__text {
       padding: 15px;
@@ -466,6 +542,24 @@
 
     &__btn {
       margin-bottom: 10px;
+    }
+  }
+
+  .descr-list {
+    &__key {
+      margin-right: 20px;
+      font-size: 14px;
+    }
+
+    &__descr {
+      font-size: 15px;
+    }
+  }
+
+  .info-text {
+    &__descr {
+      width: 100%;
+      text-align: center;
     }
   }
 }
