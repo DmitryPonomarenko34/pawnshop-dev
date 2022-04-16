@@ -15,6 +15,13 @@ export const js = () => {
     ))
     .pipe(webpack({
       mode: app.isBuild ? 'production' : 'development',
+      entry: {
+        main: './src/js/main.js',
+        default: './src/js/default.js',
+      },
+      output: {
+        filename: '[name].js',
+      },
     }))
     .pipe(babel({
       presets: ['@babel/env']

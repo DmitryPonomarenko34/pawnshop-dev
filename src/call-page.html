@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title": 'Ломбард онлайн',
+"style": 'style.min.css'
+})
+
+<body class="body">
+  <div class="site-container">
+    @@include('html/header.html', {
+    "dopClass": "header--call",
+    })
+    <main class="main">
+      <section class="o-sec">
+        <div class="container">
+          <h1 class="title">
+            Вызвать специалиста:
+          </h1>
+          <form class="recovery-form form" action="#">
+            <label class="form__label">
+              <span class="form__text">
+                Имя и фамилия:
+              </span>
+              <input class="form__input" type="text" placeholder="Введите ваше имя и фамилию">
+            </label>
+            <label class="form__label">
+              <span class="form__text">
+                Телефон:
+              </span>
+              <input class="form__input" type="text" placeholder="+XX XXX XXX XX XX">
+            </label>
+            <label class="form__label">
+              <span class="form__text">
+                Ваше изделие:
+              </span>
+              <div class="form__selectbox">
+                <select class="form__select" name="" id="">
+                  <option class="form__option" value="">Указать изделие</option>
+                  <option class="form__option" value="">Ноутбук</option>
+                  <option class="form__option" value="">Телефон</option>
+                  <option class="form__option" value="">Планшет</option>
+                </select>
+              </div>
+            </label>
+            <label class="form__label" for="fyleImg">
+              <input class="form__box-input" type="file" name="fyleImg" id="fyleImg" accept="image/*" />
+              <p class="form__box-text">
+                Загрузка изображения
+              </p>
+            </label>
+            <label class="form__label" for="checkboxInput">
+              <input class="form__box-input" type="checkbox" id="checkboxInput" />
+              <span class="form__box-checkbox">
+                Даю согласие на обработку персональных данных
+              </span>
+            </label>
+            <button class="form__btn second-btn" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+
+  <div class="modals">
+    <div class="modal-overlay">
+      @@include('html/modals/authorization-modal.html', {})
+      @@include('html/modals/recovery-modal.html', {})
+    </div>
+  </div>
+
+  <script src="js/default.min.js"></script>
+</body>
+
+</html>

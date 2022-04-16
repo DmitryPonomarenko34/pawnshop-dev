@@ -1,4 +1,5 @@
 @media (any-hover: hover) {
+
   .link,
   .footer__link,
   .contact-link,
@@ -81,6 +82,10 @@
 }
 
 @media (max-width: 1440px) {
+  .o-sec {
+    padding: 80px 0;
+  }
+
   .slider {
     &__container {
       padding-top: 70px;
@@ -104,10 +109,12 @@
 }
 
 @include laptop-L {
+
   .product,
   .about,
   .info,
-  .footer {
+  .footer,
+  .o-sec {
     padding: 40px 0;
   }
 
@@ -210,6 +217,10 @@
     display: flex;
   }
 
+  .form-elem {
+    max-width: none;
+  }
+
   .modal {
     width: 80vw;
     padding: 20px 40px;
@@ -221,6 +232,7 @@
   }
 
   .support-modal {
+
     &__inner,
     &__text {
       padding: 20px 40px;
@@ -386,7 +398,7 @@
 
   .first {
     &__inner {
-      padding: 30px 10px;
+      padding: 30px 20px;
       background-image: none;
     }
 
@@ -433,6 +445,7 @@
   }
 
   .support-modal {
+    
     &__inner,
     &__text {
       padding: 15px;

@@ -33,6 +33,10 @@ body {
   padding: 0 15px;
 }
 
+.o-sec {
+  padding: 169px 0 137px;
+}
+
 .btn-reset {
   padding: 0;
   background-color: transparent;
@@ -135,7 +139,7 @@ body {
   color: var(--default-color);
   font-size: 36px;
   line-height: 50px;
-
+  margin-bottom: 20px;
   @extend %inter-bold;
 }
 
@@ -397,6 +401,10 @@ body {
   }
 }
 
+.form-elem {
+  max-width: 50%;
+}
+
 .form {
   &__label {
     display: block;
@@ -483,6 +491,7 @@ body {
 
   &__box {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
