@@ -1,5 +1,5 @@
 <div class="modal support-modal" data-target="support-popup" data-simplebar>
-  <button class="modal__close">
+  <button class="modal__close support-modal__close">
     <svg class="support-modal__ic modal__close-ic">
       <use xlink:href="@img/icons/mono/spriteMono.svg#close"></use>
     </svg>
@@ -8,33 +8,45 @@
     Вызов специалиста
   </div>
   <div class="support-modal__inner">
-    <form class="recovery-form" action="#">
-      <label class="popup-form__label">
-        <span class="popup-form__text">
+    <form class="recovery-form form" action="#">
+      <label class="form__label">
+        <span class="form__text">
           Имя и фамилия:
         </span>
-        <input class="popup-form__input" type="text" placeholder="Введите ваше имя и фамилию">
+        <input class="form__input" type="text" placeholder="Введите ваше имя и фамилию">
       </label>
-      <label class="popup-form__label">
-        <span class="popup-form__text">
+      <label class="form__label">
+        <span class="form__text">
           Телефон:
         </span>
-        <input class="popup-form__input" type="text" placeholder="+XX XXX XXX XX XX">
+        <input class="form__input" type="text" placeholder="+XX XXX XXX XX XX">
       </label>
-      <label class="popup-form__label">
-        <span class="popup-form__text">
+      <label class="form__label">
+        <span class="form__text">
           Ваше изделие:
         </span>
-        <div class="popup-form__box">
-          <select class="popup-form__select" name="" id="">
-            <option class="popup-form__option" value="">Указать изделие</option>
-            <option class="popup-form__option" value="">Ноутбук</option>
-            <option class="popup-form__option" value="">Телефон</option>
-            <option class="popup-form__option" value="">Планшет</option>
+        <div class="form__selectbox">
+          <select class="form__select" name="" id="">
+            <option class="form__option" value="">Указать изделие</option>
+            <option class="form__option" value="">Ноутбук</option>
+            <option class="form__option" value="">Телефон</option>
+            <option class="form__option" value="">Планшет</option>
           </select>
         </div>
       </label>
-      <button class="popup-form__btn second-btn" type="submit">
+      <label class="form__label" for="fyleImg">
+        <input class="form__box-input" type="file" name="fyleImg" id="fyleImg" accept="image/*" />
+        <p class="form__box-text">
+          Загрузка изображения
+        </p>
+      </label>
+      <label class="form__label" for="checkboxInput">
+        <input class="form__box-input" type="checkbox" id="checkboxInput" />
+        <span class="form__box-checkbox">
+          Даю согласие на обработку персональных данных
+        </span>
+      </label>
+      <button class="form__btn second-btn" type="submit">
         Отправить
       </button>
     </form>

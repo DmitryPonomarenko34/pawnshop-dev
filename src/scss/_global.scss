@@ -42,7 +42,7 @@ body {
 
 .burger {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   display: none;
   align-items: center;
   width: 27px;
@@ -144,6 +144,8 @@ body {
 }
 
 .basket {
+  position: relative;
+  z-index: 4;
   display: flex;
   align-items: center;
   margin-right: 55px;
@@ -212,6 +214,10 @@ body {
     margin: 0 -19px;
   }
 
+  &__pagination {
+    display: none;
+  }
+
   &__btn-prev,
   &__btn-next {
     top: 48.5%;
@@ -265,7 +271,6 @@ body {
   color: inherit;
   background-color: #f9f9f9;
   border-radius: 30px;
-  transition: ease 0.3s box-shadow;
 
   &__imgbox {
     flex: 1 1 auto;
@@ -294,20 +299,6 @@ body {
 
   &__btn {
     line-height: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: ease 0.2s opacity, ease 0.2s visibility;
-  }
-
-  &:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: ease 0.3s box-shadow;
-
-    .card__btn {
-      visibility: visible;
-      opacity: 1;
-      transition: ease 0.2s opacity, ease 0.2s visibility;
-    }
   }
 }
 
@@ -401,9 +392,16 @@ body {
 .popup-form {
   display: none;
 
+  &.active {
+    display: block;
+  }
+}
+
+.form {
   &__label {
     display: block;
     margin-bottom: 25px;
+    cursor: pointer;
   }
 
   &__text {
@@ -413,18 +411,120 @@ body {
     @extend %inter-medium;
   }
 
-  &__input {
+  &__input,
+  &__box-text {
     width: 100%;
     height: 60px;
     padding: 0 19px;
     background: #f7f7f7;
     border: 1px solid var(--primary-color);
     border-radius: 8px;
+
+    &::placeholder {
+      color: #c2c2c2;
+    }
+  }
+
+  &__box-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    color: #c2c2c2;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 134px;
+      height: 100%;
+      color: var(--second-color);
+      background-color: var(--bg-color);
+      border-radius: 0 8px 8px 0;
+      content: "Загрузить";
+    }
+  }
+
+  &__box-checkbox {
+    position: relative;
+    padding-left: 34px;
+    pointer-events: none;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-color: #f6f6f6;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 11px 8px;
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+      content: "";
+    }
+  }
+
+  &__box-input {
+    @extend %element-hidden;
+
+    &:checked + .form__box-checkbox {
+      &::before {
+        background-image: url("@img/icons/multi/spriteMulti.svg#angle-check");
+      }
+    }
   }
 
   &__box {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__selectbox {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      width: 15px;
+      height: 16px;
+      background-image: url("@img/icons/multi/spriteMulti.svg#angle-down");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transform: translateY(-50%);
+      content: "";
+      pointer-events: none;
+    }
+  }
+
+  &__select {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 0 19px;
+    color: #c2c2c2;
+    text-indent: 1px;
+    text-overflow: "";
+    text-shadow: none;
+    background: #f7f7f7;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  &__option {
+    color: var(--default-color);
+    background-color: var(--second-color);
   }
 
   &__btn {
@@ -437,10 +537,6 @@ body {
     font-size: 16px;
 
     @extend %inter-medium;
-  }
-
-  &.active {
-    display: block;
   }
 }
 

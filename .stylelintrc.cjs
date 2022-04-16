@@ -6,6 +6,9 @@ module.exports = {
   rules: {
     "font-family-name-quotes": null,
     "at-rule-no-unknown": null,
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null,
   }
 };

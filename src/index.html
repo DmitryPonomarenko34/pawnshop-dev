@@ -12,7 +12,7 @@
     <main class="main">
       <section class="first">
         <div class="container">
-          <div class="first__inner" style="background-image: url('@img/main/first-sec/bg-1.jpg');">
+          <div class="first__inner">
             <div class="first__box">
               <h1 class="first__title">
                 Ломбард
@@ -23,13 +23,17 @@
                 и электроинструментов
               </p>
             </div>
+            <picture>
+              <source srcset="@img/main/first-sec/bg-1.webp" media="(min-width: 768)" type="image/webp">
+              <img class="first__img" src="@img/main/first-sec/bg-1.png" alt="">
+            </picture>
           </div>
         </div>
       </section>
       <section class="product">
         <div class="container">
           <div class="product__info">
-            <h2 class="title">
+            <h2 class="product__title title">
               Наши товары
             </h2>
             <ul class="product__list">
@@ -181,8 +185,8 @@
                   </a>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
             </div>
+            <div class="slider__pagination swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -203,7 +207,7 @@
                 </p>
             </div>
             <picture>
-              <source srcset="@img/main/about/1.webp" type="image/webp">
+              <source srcset="@img/main/about/1.webp" media="(min-width: 768)" type="image/webp">
               <img class="about__img" src="@img/main/about/1.png" alt="декоративная картинка">
             </picture>
           </div>

@@ -59,8 +59,16 @@
   background-size: cover;
 }
 
+%element-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 @mixin laptop-L {
-  @media (max-width: 1440px) {
+  @media (max-width: 1200px) {
     @content;
   }
 }

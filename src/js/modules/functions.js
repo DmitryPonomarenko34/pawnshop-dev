@@ -20,9 +20,10 @@ let menuList = document.querySelector('.menu__list');
 
 if (burgerBtn) {
   burgerBtn.addEventListener('click', function () {
+    body.classList.toggle('body--lock');
     this.classList.toggle('burger--active');
     if (menuList) {
-      menuList.classList.toggle('menu__box--open');
+      menuList.classList.toggle('menu__list--open');
     }
   })
 }
@@ -41,7 +42,14 @@ closeBtn.forEach((el) => {
       el.classList.remove('modal--visible');
     });
 
-    body.classList.remove('body--lock');
+    if (body.classList.contains('body--lock')) {
+      modalOverlay.classList.remove('modal-overlay--visible');
+      return false;
+    } else {
+      body.classList.remove('body--lock');
+      modalOverlay.classList.remove('modal-overlay--visible');
+    }
+
     modalOverlay.classList.remove('modal-overlay--visible');
   });
 });
@@ -57,15 +65,21 @@ btns.forEach((el) => {
 
     document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
     modalOverlay.classList.add('modal-overlay--visible');
-    body.classList.add('body--lock');
   });
 });
 
 modalOverlay.addEventListener('click', (e) => {
 
   if (e.target == modalOverlay) {
-    modalOverlay.classList.remove('modal-overlay--visible');
-    body.classList.remove('body--lock');
+
+    if (body.classList.contains('body--lock')) {
+      modalOverlay.classList.remove('modal-overlay--visible');
+      return false;
+    } else {
+      body.classList.remove('body--lock');
+      modalOverlay.classList.remove('modal-overlay--visible');
+    }
+
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
     });
@@ -93,3 +107,45 @@ tabBtns.forEach((el) => {
     document.querySelector(`[data-target="${path}"]`).classList.add('active');
   });
 });
+
+
+let maxResize = false;
+let minResize = false;
+
+var f_windowWidth = function (w) {
+  if (w <= n && !minResize) {
+    maxResize = false;
+    minResize = true;
+
+    let header = document.querySelector('.header');
+    let headerHeight = header.clientHeight;
+    let menuList = document.querySelector('.menu__list');
+
+    menuList.style.paddingTop = String(headerHeight + 'px');
+  }
+
+  if (w >= n && !maxResize) {
+    maxResize = true;
+    minResize = false;
+
+    let menuList = document.querySelector('.menu__list');
+
+    menuList.style.paddingTop = null;
+  }
+}
+
+let n = 768,
+  w = window.innerWidth;
+
+f_windowWidth(w);
+
+window.addEventListener('resize', function () {
+  let w = window.innerWidth;
+  f_windowWidth(w);
+});
+
+const inputFile = document.getElementById('fyleImg');
+const fileName =  document.querySelector('.form__box-text');
+inputFile.onchange = () => {
+  fileName.textContent = inputFile.files[0].name;
+}
