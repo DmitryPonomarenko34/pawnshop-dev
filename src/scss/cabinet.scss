@@ -1,0 +1,13 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "../../node_modules/simplebar/dist/simplebar.min";
+@import "global";
+@import "components/header";
+@import "components/footer";
+
+.cabinet {
+  padding: 50px 0 260px;
+}
+
+@import "media";

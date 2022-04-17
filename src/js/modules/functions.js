@@ -144,8 +144,15 @@ window.addEventListener('resize', function () {
   f_windowWidth(w);
 });
 
-const inputFile = document.getElementById('fyleImg');
-const fileName =  document.querySelector('.form__box-text');
-inputFile.onchange = () => {
-  fileName.textContent = inputFile.files[0].name;
-}
+const inputFile = document.querySelectorAll('input[data-input="fyleImg"]');
+
+inputFile.forEach(element => {
+
+  element.onchange = () => {
+    
+    let elemParent = element.parentElement;
+    let fileName = elemParent.getElementsByClassName('form__box-text');
+
+    fileName[0].textContent = element.files[0].name;
+  }
+});

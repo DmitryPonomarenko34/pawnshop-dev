@@ -596,6 +596,16 @@ body {
     }
   }
 
+  &__box-descr {
+    max-width: 704px;
+  }
+
+  &__box-caption {
+    display: block;
+    margin-bottom: 6px;
+    @extend %inter-medium;
+  }
+
   &__box-checkbox {
     position: relative;
     padding-left: 34px;
@@ -620,7 +630,7 @@ body {
   &__box-input {
     @extend %element-hidden;
 
-    &:checked + .form__box-checkbox {
+    &:checked+.form__box-checkbox {
       &::before {
         background-image: url("@img/icons/multi/spriteMulti.svg#angle-check");
       }
@@ -684,6 +694,52 @@ body {
     font-size: 16px;
 
     @extend %inter-medium;
+  }
+}
+
+.user-form {
+  &__select {
+    color: var(--default-color);
+    @extend %inter-medium;
+  }
+
+  &__box {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: auto;
+    min-height: 178px;
+    padding: 34px 30px;
+    color: var(--default-color);
+    white-space: normal;
+
+    &::after {
+      top: 50%;
+      right: 21px;
+      width: 169px;
+      height: 60px;
+      border-radius: 30px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__inner-label {
+    width: 100%;
+    max-width: 48%;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__inner-caption {
+    max-width: 200px;
   }
 }
 
