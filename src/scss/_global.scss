@@ -392,6 +392,73 @@ body {
   }
 }
 
+.table {
+  width: 100%;
+  border: none;
+  border-spacing: 0 20px;
+
+  tr {
+    border-spacing: 20px;
+
+    th {
+      padding: 25px;
+      color: #6c6c6c;
+      font-size: 14px;
+      text-align: start;
+      border: none;
+
+      @extend %inter-medium;
+    }
+
+    td {
+      padding: 25px;
+      font-size: 14px;
+
+      @extend %inter-medium;
+
+      &:first-child {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+
+      &.table__accent-text {
+        @extend %inter-bold;
+      }
+    }
+
+    &:not(:first-child) {
+      background: #f9f9f9;
+    }
+  }
+
+  &--false {
+    @extend %inter-bold;
+  }
+
+  &--succes {
+    color: #4db45e;
+
+    @extend %inter-bold;
+  }
+
+  &--wait {
+    color: #d77b48;
+
+    @extend %inter-bold;
+  }
+
+  &--error {
+    color: #d72a4d;
+
+    @extend %inter-bold;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -603,6 +670,7 @@ body {
   &__box-caption {
     display: block;
     margin-bottom: 6px;
+
     @extend %inter-medium;
   }
 
@@ -630,7 +698,7 @@ body {
   &__box-input {
     @extend %element-hidden;
 
-    &:checked+.form__box-checkbox {
+    &:checked + .form__box-checkbox {
       &::before {
         background-image: url("@img/icons/multi/spriteMulti.svg#angle-check");
       }
@@ -700,6 +768,7 @@ body {
 .user-form {
   &__select {
     color: var(--default-color);
+
     @extend %inter-medium;
   }
 

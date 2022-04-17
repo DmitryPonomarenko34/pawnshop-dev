@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title": 'Ломбард онлайн',
+"style": 'requests.min.css'
+})
+
+<body class="body">
+  <div class="site-container">
+    @@include('html/header.html', {
+    "dopClass": '',
+    })
+    <main class="main">
+      <section class="requests">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">
+                Главная
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link current">
+                Ваша корзина
+              </a>
+            </li>
+          </ul>
+          <h1 class="title">
+            Заявки
+          </h1>
+          <div class="table-box">
+            <table class="table">
+              <tr>
+                <th>
+                  ID
+                </th>
+                <th>
+                  Дата заявки
+                </th>
+                <th>
+                  Сумма займа
+                </th>
+                <th>
+                  Срок займа
+                </th>
+                <th>
+                  Сумма возврата
+                </th>
+                <th>
+                  Статус
+                </th>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>05.04.2022</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td>7 дней</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td class="table--false">В займе отказано</td>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>05.04.2022</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td>7 дней</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td class="table--succes">Зачислены на карту</td>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>05.04.2022</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td>7 дней</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td class="table--wait">Ожидание зачисления</td>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>05.04.2022</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td>7 дней</td>
+                <td class="table__accent-text">1100.00 €</td>
+                <td class="table--error">Неоходима верификация</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+
+  <div class="modals">
+    <div class="modal-overlay">
+      @@include('html/modals/authorization-modal.html', {})
+      @@include('html/modals/recovery-modal.html', {})
+      @@include('html/modals/support-modal.html', {})
+    </div>
+  </div>
+
+  <script src="js/default.min.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,4 @@
 @media (any-hover: hover) {
-
   .link,
   .footer__link,
   .contact-link,
@@ -127,13 +126,14 @@
 }
 
 @include laptop-L {
-
   .product,
   .about,
   .info,
   .footer,
   .o-sec,
-  .cabinet {
+  .cabinet,
+  .request,
+  .basket-page {
     padding: 40px 0;
   }
 
@@ -309,7 +309,6 @@
   }
 
   .support-modal {
-
     &__inner,
     &__text {
       padding: 20px 40px;
@@ -533,6 +532,15 @@
       margin: 0 auto 20px;
     }
   }
+
+  .table-box {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table {
+    width: 1000px;
+  }
 }
 
 @include portrait-phones {
@@ -607,7 +615,6 @@
   }
 
   .support-modal {
-
     &__inner,
     &__text {
       padding: 15px;
