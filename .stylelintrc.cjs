@@ -10,5 +10,6 @@ module.exports = {
     "property-no-vendor-prefix": null,
     "alpha-value-notation": null,
     "color-function-notation": null,
+    "no-invalid-position-at-import-rule": null,
   }
 };

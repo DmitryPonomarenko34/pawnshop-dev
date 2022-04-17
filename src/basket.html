@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title": 'Ломбард онлайн',
+"style": 'basket.min.css'
+})
+
+<body class="body">
+  <div class="site-container">
+    @@include('html/header.html', {
+    "dopClass": '',
+    })
+    <main class="main">
+      <section class="basket-page">
+        <div class="container">
+          <h1 class="hidden">
+            Страница корзины
+          </h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">
+                Главная
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link current">
+                Ваша корзина
+              </a>
+            </li>
+          </ul>
+          <h2 class="title">
+            Ваша корзина
+          </h2>
+          <div class="basket-page__items">
+            <div class="basket-page__item">
+              <picture>
+                <source srcset="@img/basket/1.webp" type="image/webp">
+                <img class="basket-page__img" src="@img/basket-page/1.png" alt="телефон">
+              </picture>
+              <p class="basket-page__caption">
+                Мобильный телефон Apple iPhone 13 Pro 256GB Silver
+              </p>
+              <span class="basket-page__price">
+                1100.00 €
+              </span>
+              <button class="basket-page__btn btn-reset action-btn">
+                Удалить
+              </button>
+            </div>
+            <div class="basket-page__box">
+              <button class="basket-page__btn btn-reset action-btn">
+                Очистить корзину
+              </button>
+              <div class="basket-page__box-info">
+                <span class="basket-page__box-count">
+                  Товаров в корзине:
+                  <span class="basket-page__box-count--num">1</span>
+                </span>
+                <span class="basket-page__box-summ">
+                  Итого:
+                  <span class="basket-page__box-summ--num">1100.00 €</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="complete-form">
+            <h2 class="title">
+              Оформление заказа
+            </h2>
+            <form class="form" action="#">
+              <div class="complete-form__box">
+                <label class="complete-form__label form__label">
+                  <span class="form__text">
+                    Имя:
+                  </span>
+                  <input class="form__input" type="text" placeholder="Введите ваше имя">
+                </label>
+                <label class="complete-form__label form__label">
+                  <span class="form__text">
+                    Телефон:
+                  </span>
+                  <input class="form__input" type="text" placeholder="+XX XXX XXX XX XX">
+                </label>
+              </div>
+              <div class="complete-form__box">
+                <label class="complete-form__label form__label">
+                  <span class="form__text">
+                    Номер карты
+                  </span>
+                  <input class="form__input" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="XXXX XXXX XXXX XXXX">
+                </label>
+                <label class="complete-form__label form__label">
+                  <span class="form__text">
+                    Срок действия:
+                  </span>
+                  <div class="form__label-box">
+                    <input class="form__label-input form__input" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="2" placeholder="MM">
+                    <input class="form__label-input form__input" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="4" placeholder="YY">
+                  </div>
+                </label>
+              </div>
+              <label class="complete-form__label form__label" for="completeCheckbox">
+                <input class="form__box-input" type="checkbox" id="completeCheckbox" />
+                <span class="form__box-checkbox">
+                  Даю согласие на обработку персональных данных
+                </span>
+              </label>
+              <button class="form__btn second-btn" type="submit">
+                Оформить заказ
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+
+  <div class="modals">
+    <div class="modal-overlay">
+      @@include('html/modals/authorization-modal.html', {})
+      @@include('html/modals/recovery-modal.html', {})
+      @@include('html/modals/support-modal.html', {})
+    </div>
+  </div>
+
+  <script src="js/default.min.js"></script>
+</body>
+
+</html>

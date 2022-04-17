@@ -23,9 +23,9 @@
   transition: ease 0.3s fill;
 }
 
-@mixin link-hover {
+@mixin link-hover($bg-color: var(--default-color),) {
   color: var(--second-color);
-  background-color: var(--default-color);
+  background-color: $bg-color;
   transition: ease 0.3s background-color, ease 0.3s color;
 }
 

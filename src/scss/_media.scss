@@ -58,6 +58,15 @@
     }
   }
 
+  .action-btn,
+  .action-link {
+    @include link-hover-trs;
+
+    &:hover {
+      @include link-hover(var(--bg-color), );
+    }
+  }
+
   .card {
     transition: ease 0.3s box-shadow;
 
@@ -76,6 +85,15 @@
         opacity: 1;
         transition: ease 0.2s opacity, ease 0.2s visibility;
       }
+    }
+  }
+
+  .form__input {
+    transition: ease 0.3s box-shadow;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: ease 0.3s box-shadow;
     }
   }
 }
@@ -220,6 +238,20 @@
     &__item:nth-child(2) {
       margin-right: 0;
       padding-top: 0;
+    }
+  }
+
+  .basket-page {
+    &__item {
+      padding: 20px 15px;
+    }
+
+    &__price {
+      margin-right: 20px;
+    }
+
+    &__img {
+      margin-right: 25px;
     }
   }
 }
@@ -452,9 +484,46 @@
       padding: 0 10px 10px;
     }
   }
+
+  .complete-form {
+    max-width: none;
+
+    &__label {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &__box {
+      display: block;
+    }
+  }
+
+  .basket-page {
+    &__item {
+      display: block;
+      padding: 15px;
+      text-align: center;
+    }
+
+    &__price {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      margin: 0 auto 20px;
+    }
+  }
 }
 
 @include portrait-phones {
+  .breadcrumbs {
+    margin-bottom: 10px;
+  }
+
   .header {
     padding: 20px 0;
   }
@@ -560,6 +629,21 @@
     &__descr {
       width: 100%;
       text-align: center;
+    }
+  }
+
+  .basket-page {
+    &__box {
+      display: block;
+    }
+
+    &__items {
+      padding-bottom: 30px;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-bottom: 15px;
     }
   }
 }
