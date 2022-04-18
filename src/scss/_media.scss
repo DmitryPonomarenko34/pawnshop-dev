@@ -193,6 +193,10 @@
     }
   }
 
+  .form-elem {
+    max-width: none;
+  }
+
   .first {
     &__img {
       right: 0;
@@ -294,12 +298,8 @@
     display: flex;
   }
 
-  .form-elem {
-    max-width: none;
-  }
-
   .modal {
-    width: 80vw;
+    width: calc(100vw - 30px);
     padding: 20px 40px;
 
     &__close {
@@ -394,6 +394,10 @@
 
   .card {
     padding: 20px 15px;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 
   .slider {
@@ -598,7 +602,7 @@
   }
 
   .modal {
-    padding: 15px;
+    padding: 15px 20px;
 
     &__tabs {
       display: block;
@@ -623,7 +627,7 @@
     .support-modal {
       &__close {
         top: 20px;
-        right: 20px;
+        right: 25px;
       }
     }
   }
@@ -635,6 +639,16 @@
 
     &__btn {
       margin-bottom: 10px;
+    }
+  }
+
+  .form-elem {
+    &__btn {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
   }
 
